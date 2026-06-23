@@ -1,0 +1,21 @@
+.card {
+  width: 120px;
+  min-height: 150px;
+  padding: 16px;
+  border-radius: 12px;
+  background: rgb(101, 150, 121);
+ 
+  margin:10px;
+  cursor: pointer;
+}
+
+
+.card h1 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #555;
+  line-height: 1.5;
+}
