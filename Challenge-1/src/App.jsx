@@ -4,6 +4,10 @@ function App() {
 
   return (
     <>
+     <Card profileName="CodingLabs" profile=""/>
+     <Card/>
+     <Card/>
+     <Card/>
      <Card/>
     </>
   )
