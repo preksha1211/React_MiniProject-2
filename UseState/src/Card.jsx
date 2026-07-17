@@ -3,7 +3,7 @@ function Card() {
   const[count ,setCount] =useState(0);
    function increment(){
        setCount(prev => prev + 1)
-       setCount(prev => prev + 1)
+      
    }
 
 

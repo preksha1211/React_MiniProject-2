@@ -1,101 +1,62 @@
-import React from 'react';
-import Header from './Header.jsx'
-import { createElement } from 'react';
+import React from "react";
+import Header from "./Header.jsx";
+
 function App() {
-  let age=87;
-  let alpha ='isha';
-  let name='ankit';
-  function greet(){
-    return "preksha"
+  // Variables
+  let age = 87;
+  let isOutOfStock = true;
+  let arr = ["jj", "kk", "pp"];
+
+  // Function
+  function greet() {
+    return "Preksha";
   }
-  let isOutOfStock=true;
-  let arr=['jj','kk','pp']
+
+  // JSX in Variable
+  const alpha = <p>Hello! How are you? {2 + 2}</p>;
+
   return (
     <>
-       {/* <h1>hello {greet()}</h1>
-       <h1>{age>=18?'you can drive':'you can not driv'}</h1>
+      {/* 1. Function Call */}
+      <h1>Hello {greet()}</h1>
 
-         <h1>{age>=18?<p style={{color:'green'}}>You can drive</p>:<p style={{color:'red'}}>you can not drive</p>}</h1>
+      {/* 2. Ternary Operator */}
+      <h1>{age >= 18 ? "You can drive" : "You cannot drive"}</h1>
 
-       <h1 style={{
-        backgroundColor:"pink",
-        color:"green",
-        fontFamily:"fantasy"
-       }}>Hello style</h1>
-       {isOutOfStock && <p>out of stock</p>}
-       
-       {
-        arr.map((item,index)=>{
-            console.log(item,index);
-            return <h3 key={index}>{item}</h3>
-        })
-       }
-        
-        <Header title="preksha"/>
-        <Header title={<p>fow are{2+2}</p>}/> */}
-
-        <h1>Hello how are you</h1>
-        {React.createElement('h1',null,"how are you")}
-
-        <h1 className='heading'>hello</h1>
-        {React.createElement('h1',{className:'heading',style:{backgroundColor:'red',color:'white'}},'hello')}
-
-
-        <div>
-          <p>hello</p>
-        </div>
-
-        {React.createElement(
-          'div',
-          null,
-          React.createElement(
-            'p',
-            {style:{backgroundColor:'violet',color:'maroon'}},
-            "hello"
-          )
-        )}
-
-
-        {React.createElement('h1',null,'Hello, Muskan!')}
-
-        
-        {React.createElement('h1',{className:'heading'},'Hello, Muskan!')}
-        
-        {React.createElement('a',{className:'link',href:'https://www.school4u.in'},'School4U')}
-
-        {React.createElement('h1',null,name)}
-         
-        {React.createElement('h1',null,` hello ${alpha}.you are ${age} years old`)}
-       
-      {React.createElement(
-        'div',
-        null,
-        React.createElement('h1',null,"hello, Mhek")
-
+      {/* 3. Conditional Rendering */}
+      {age >= 18 ? (
+        <p>You can drive</p>
+      ) : (
+        <p>You cannot drive</p>
       )}
 
-      {React.createElement(
-        'div',
-        {className:'alpha',style:{color:'red',fontSize:'20px'}},
-        React.createElement('h1',null,"hello")
+      {/* 4. Inline CSS */}
+      <h1
+        style={{
+          backgroundColor: "pink",
+          color: "green",
+          fontFamily: "fantasy",
+        }}
+      >
+        Hello Style
+      </h1>
 
-      )}
+      {/* 5. Short Circuit Rendering */}
+      {isOutOfStock && <p>Out of Stock</p>}
 
-      {React.createElement(
-        'div',
-        {className:'card'},
-        React.createElement('h1',null,`Hello, ${name}`),
-         React.createElement('p',null,
-          `you are ${age+1} years old next day`
-         )
+      {/* 6. JSX with Loops */}
+      {arr.map((item, index) => (
+        <h3 key={index}>{item}</h3>
+      ))}
 
-      )}
-       
+      {/* 7. JSX pass in Props */}
+      <Header title="Preksha" />
+      <Header title={<p>How are you? {2 + 2}</p>} />
 
-         
-
+      {/* 8. JSX Stored in Variable */}
+      {alpha}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
